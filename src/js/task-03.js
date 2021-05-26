@@ -27,20 +27,3 @@ const insertGallery = (array) => {
 };
 
 insertGallery(images);
-
-// const makeImagesOptions = ({ url, alt }) => {
-//   const galleryItemEl = document.createElement('li');
-//   galleryItemEl.classList.add('gallery-item');
-
-//   const galleryImgEl = document.createElement('img');
-//   galleryImgEl.classList.add('img-item');
-//   galleryImgEl.src = url;
-//   galleryImgEl.alt = alt;
-//   galleryItemEl.appendChild(galleryImgEl);
-
-//   return galleryItemEl;
-// };
-
-// const elements = images.map(makeImagesOptions);
-// imagesRef.append(...elements);
-// console.log(imagesRef);
