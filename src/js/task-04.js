@@ -8,6 +8,10 @@ const counter = {
     }
 }
 
+// const decrementBtn = document.querySelector("[data-action=decrement]");
+// const incrementBtn = document.querySelector("[data-action=increment]");
+// const counterValue = document.querySelector("#value");
+
 const refs = {
     incrementBtn: document.querySelector("[data-action=increment]"),
     decrementBtn: document.querySelector("[data-action=decrement]"),
@@ -23,4 +27,3 @@ refs.decrementBtn.addEventListener("click", function () {
     counter.decrement();
     refs.counterValue.textContent = counter.value;
 });
-
