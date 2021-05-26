@@ -1,14 +1,16 @@
-const catItemRef = document.querySelectorAll('.item');
 
-console.log(`В списке ${catItemRef[0].parentElement.children.length} категории.`);
+const itemsEl = document.querySelectorAll('.item');
 
-console.log(`Категория: ${catItemRef[0].firstElementChild.textContent}`);
-console.log(`Количество элементов: ${catItemRef[0].lastElementChild.children.length}`);
+const getCategoriesEl = () =>
+  console.log(`В списке ${itemsEl.length} категории.`);
 
-console.log(`Категория: ${catItemRef[1].firstElementChild.textContent}`);
-console.log(`Количество элементов: ${catItemRef[1].lastElementChild.children.length}`);
-
-console.log(`Категория: ${catItemRef[2].firstElementChild.textContent}`);
-console.log(`Количество элементов: ${catItemRef[2].lastElementChild.children.length}`);
-
-
+const getItemsEl = items => {
+  return items.forEach(item => {
+    const title = item.firstElementChild.textContent;
+    const number = item.lastElementChild.children.length;
+    console.log(`Категория: ${title}
+  Количество елементов: ${number}`);
+  });
+};
+getCategoriesEl('.item');
+getItemsEl(itemsEl);
